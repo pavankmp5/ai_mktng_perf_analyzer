@@ -8,4 +8,6 @@ venv/
 .env
 .env.*
 !.env.example
-reports/
+reports/*
+!reports/marketing_report.json
+!reports/marketing_report.html
