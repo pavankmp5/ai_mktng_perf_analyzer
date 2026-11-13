@@ -1,0 +1,3000 @@
+{
+  "schema_version": "1.2",
+  "generated_at": "2026-11-12T14:10:35.352583+00:00",
+  "data_limitations": [
+    "Inputs are current aggregates; no historical trend claims are made.",
+    "AI recommendations are optional and remain separate from deterministic calculations."
+  ],
+  "recommendations": [
+    {
+      "recommendation_id": "rec-1",
+      "title": "Review and optimize spend on high-spend campaigns with below-peer ROAS",
+      "category": "Advertising",
+      "description": "Several high-spend campaigns such as Google Performance Max, Meta - Prospecting, and Google Shopping - Dresses have ROAS below the campaign median despite spending at or above the median. This indicates potential inefficiencies in budget allocation.",
+      "related_finding_ids": [
+        "ads-6-high-spend",
+        "ads-3-high-spend",
+        "ads-1-high-spend",
+        "ads-6-low-roas",
+        "ads-3-low-roas",
+        "ads-1-low-roas",
+        "ads-7-low-roas"
+      ],
+      "priority": "Critical",
+      "evidence": [
+        "source row 8: spend_usd=1120.0; roas=3.25; peer_median_roas=4.476027397260274",
+        "source row 5: spend_usd=950.0; roas=2.2; peer_median_roas=4.476027397260274",
+        "source row 3: spend_usd=880.0; roas=3.25; peer_median_roas=4.476027397260274",
+        "source row 9: roas=3.452054794520548; peer_median_roas=4.476027397260274"
+      ],
+      "suggested_action": "Review spend allocation alongside conversions, revenue, and ROAS. Investigate creative, audience, placement, and landing-page efficiency before making budget changes.",
+      "expected_business_outcome": "Improved return on ad spend and more efficient budget utilization.",
+      "measurement_method": "Monitor ROAS and conversion rates post-optimization and compare against campaign medians.",
+      "implementation_effort": "High",
+      "confidence": "high",
+      "assumptions": [
+        "Campaign median ROAS is a relevant benchmark.",
+        "Improving creative, audience, placement, or landing-page efficiency can increase ROAS."
+      ],
+      "limitations": [
+        "A lower relative ROAS is not proof of unprofitability without business margin targets.",
+        "No budget target is available for spend comparison."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "0165723897aedc87ef78165644311c0aa774788a12f603feaa8fce1417231a95"
+    },
+    {
+      "recommendation_id": "rec-2",
+      "title": "Protect and monitor high-revenue campaigns",
+      "category": "Advertising",
+      "description": "Campaigns such as Google Search - Prom, Google Search - Brand, and Meta - Sale Creative contribute meaningful revenue in the upper quartile of supplied campaigns.",
+      "related_finding_ids": [
+        "ads-0-meaningful-revenue",
+        "ads-4-meaningful-revenue",
+        "ads-9-meaningful-revenue"
+      ],
+      "priority": "High",
+      "evidence": [
+        "source row 2: revenue_usd=3720.0; upper_quartile=3700.0",
+        "source row 6: revenue_usd=5760.0; upper_quartile=3700.0",
+        "source row 11: revenue_usd=3740.0; upper_quartile=3700.0"
+      ],
+      "suggested_action": "Protect the campaigns' measured revenue contribution while checking incrementality and conversion quality.",
+      "expected_business_outcome": "Sustained or improved revenue contribution from key campaigns.",
+      "measurement_method": "Track revenue and conversion quality metrics over time for these campaigns.",
+      "implementation_effort": "Medium",
+      "confidence": "high",
+      "assumptions": [
+        "Revenue contribution is meaningful and incremental.",
+        "Conversion quality is a valid proxy for campaign effectiveness."
+      ],
+      "limitations": [
+        "Incrementality and margin data are unavailable.",
+        "Revenue contribution alone does not guarantee profitability."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "0a5ab9a9e1f9abade4f48eccdcaaf340a1090293fb8574d202ff57d9535fb5e2"
+    },
+    {
+      "recommendation_id": "rec-3",
+      "title": "Leverage high-ROAS campaigns for controlled scaling",
+      "category": "Advertising",
+      "description": "Campaigns like Google Search - Prom, Meta - Retargeting, and Google Search - Brand have ROAS in the upper quartile, indicating strong performance potential.",
+      "related_finding_ids": [
+        "ads-0-high-roas",
+        "ads-2-high-roas",
+        "ads-4-high-roas"
+      ],
+      "priority": "High",
+      "evidence": [
+        "source row 2: roas=6.0; upper_quartile=5.875",
+        "source row 4: roas=8.0; upper_quartile=5.875",
+        "source row 6: roas=24.0; upper_quartile=5.875"
+      ],
+      "suggested_action": "Run a controlled review to determine if learnings can be replicated; avoid automatic budget increases.",
+      "expected_business_outcome": "Potential for scalable revenue growth with maintained efficiency.",
+      "measurement_method": "Conduct controlled experiments and monitor ROAS and revenue impact.",
+      "implementation_effort": "Medium",
+      "confidence": "high",
+      "assumptions": [
+        "High ROAS indicates potential for scalable performance.",
+        "Controlled reviews can identify replicable strategies."
+      ],
+      "limitations": [
+        "High ROAS alone does not establish incremental scalability or causal performance."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "1c19cfd24543ee8291d5f49dbd0140f87e876b2ebc5f9ab8d71d480c0be087c0"
+    },
+    {
+      "recommendation_id": "rec-4",
+      "title": "Improve low conversion rate campaigns through creative and audience testing",
+      "category": "Advertising",
+      "description": "Campaigns such as Google Shopping - Dresses, Meta - Prospecting, Google Performance Max, and Meta - Lookalike have conversion rates below the campaign median.",
+      "related_finding_ids": [
+        "ads-1-low-conversion",
+        "ads-3-low-conversion",
+        "ads-6-low-conversion",
+        "ads-7-low-conversion"
+      ],
+      "priority": "High",
+      "evidence": [
+        "source row 3: conversion_rate_pct=1.25; peer_median=2.0",
+        "source row 5: conversion_rate_pct=1.0; peer_median=2.0",
+        "source row 8: conversion_rate_pct=1.25; peer_median=2.0",
+        "source row 9: conversion_rate_pct=1.4383561643835616; peer_median=2.0"
+      ],
+      "suggested_action": "Compare these campaigns with stronger peers and test the most relevant creative or audience variables.",
+      "expected_business_outcome": "Improved conversion rates leading to better campaign efficiency.",
+      "measurement_method": "Track conversion rates and compare against campaign medians after testing.",
+      "implementation_effort": "Medium",
+      "confidence": "medium",
+      "assumptions": [
+        "Creative and audience variables impact conversion rates.",
+        "Peer median conversion rates are appropriate benchmarks."
+      ],
+      "limitations": [
+        "Relative results are not absolute failures without campaign objectives."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "32ad5c88d24bc6d5524989912257a4ae10dd729659cb5c6f7daf369d8613c64a"
+    },
+    {
+      "recommendation_id": "rec-5",
+      "title": "Enhance CTR for campaigns below peer median",
+      "category": "Advertising",
+      "description": "Several campaigns including Meta - Prospecting, Meta - New Collection, Google Performance Max, Meta - Lookalike, and Meta - Sale Creative have CTR below the campaign median.",
+      "related_finding_ids": [
+        "ads-3-low-ctr",
+        "ads-5-low-ctr",
+        "ads-6-low-ctr",
+        "ads-7-low-ctr",
+        "ads-9-low-ctr"
+      ],
+      "priority": "High",
+      "evidence": [
+        "source row 5: ctr_pct=1.3013698630136987; peer_median=1.510111022997621",
+        "source row 7: ctr_pct=1.443298969072165; peer_median=1.510111022997621",
+        "source row 8: ctr_pct=1.3333333333333335; peer_median=1.510111022997621",
+        "source row 9: ctr_pct=1.3035714285714286; peer_median=1.510111022997621",
+        "source row 11: ctr_pct=1.4049586776859504; peer_median=1.510111022997621"
+      ],
+      "suggested_action": "Compare these campaigns with stronger peers and test the most relevant creative or audience variables to improve CTR.",
+      "expected_business_outcome": "Increased CTR leading to higher engagement and potential conversions.",
+      "measurement_method": "Monitor CTR improvements relative to campaign medians after optimizations.",
+      "implementation_effort": "Medium",
+      "confidence": "medium",
+      "assumptions": [
+        "Creative and audience variables influence CTR.",
+        "Peer median CTR is a relevant benchmark."
+      ],
+      "limitations": [
+        "Relative CTR below median is not an absolute failure without campaign objectives."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "937aa4b388f85856257209cd0354b720da39684bb75a59336483088153880892"
+    },
+    {
+      "recommendation_id": "rec-6",
+      "title": "Review and optimize SEO pages with high impressions but below-peer CTR",
+      "category": "SEO",
+      "description": "Pages such as black-mermaid-prom-dress, blue-cocktail-dress, black-off-shoulder-gown, and long-sleeve-evening-dress have high impressions but organic CTR below the median, indicating potential for improved search snippet effectiveness.",
+      "related_finding_ids": [
+        "seo-0-high-impression-low-ctr",
+        "seo-2-high-impression-low-ctr",
+        "seo-6-high-impression-low-ctr",
+        "seo-9-high-impression-low-ctr"
+      ],
+      "priority": "High",
+      "evidence": [
+        "source row 2: impressions_28d=52000.0; organic_ctr_pct=0.7884615384615384; peer_median_ctr=1.75",
+        "source row 4: impressions_28d=21400.0; organic_ctr_pct=0.5; peer_median_ctr=1.75",
+        "source row 8: impressions_28d=44000.0; organic_ctr_pct=0.7000000000000001; peer_median_ctr=1.75",
+        "source row 11: impressions_28d=18100.0; organic_ctr_pct=1.0; peer_median_ctr=1.75"
+      ],
+      "suggested_action": "Review title, snippet, and search-intent alignment while considering average position to improve CTR.",
+      "expected_business_outcome": "Higher organic CTR leading to increased organic traffic and potential conversions.",
+      "measurement_method": "Track changes in organic CTR and impressions over time for these pages.",
+      "implementation_effort": "Medium",
+      "confidence": "high",
+      "assumptions": [
+        "Improving title and snippet relevance can increase CTR.",
+        "Search-intent alignment affects user click behavior."
+      ],
+      "limitations": [
+        "CTR varies with query mix and position.",
+        "28-day aggregate data has no historical trend."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "bf2eb30b110efa5918a534a7bade29b88ee52a3a878856229eb5181765d46fc0"
+    },
+    {
+      "recommendation_id": "rec-7",
+      "title": "Investigate and resolve non-indexed SEO pages",
+      "category": "SEO",
+      "description": "Pages navy-formal-dress and long-sleeve-evening-dress are marked as not indexed, limiting their visibility in search results.",
+      "related_finding_ids": [
+        "seo-3-not-indexed",
+        "seo-9-not-indexed"
+      ],
+      "priority": "High",
+      "evidence": [
+        "source row 5: indexed=False",
+        "source row 11: indexed=False"
+      ],
+      "suggested_action": "Inspect indexability, canonicalisation, robots directives, and sitemap coverage to resolve indexing issues.",
+      "expected_business_outcome": "Improved search visibility and potential organic traffic growth.",
+      "measurement_method": "Monitor indexing status and organic impressions after remediation.",
+      "implementation_effort": "Medium",
+      "confidence": "high",
+      "assumptions": [
+        "Indexing issues are resolvable through technical SEO fixes.",
+        "Indexed pages will gain organic visibility."
+      ],
+      "limitations": [
+        "Dataset does not explain why pages are not indexed."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "331b7b479b37f96795db5ca426377bfdeae5905bee16a89391f55fbfc8457add"
+    },
+    {
+      "recommendation_id": "rec-8",
+      "title": "Address comparatively slow page load times on key SEO pages",
+      "category": "SEO",
+      "description": "Pages ivory-formal-gown, blue-cocktail-dress, and long-sleeve-evening-dress have page load times in the upper quartile, potentially impacting user experience and SEO performance.",
+      "related_finding_ids": [
+        "seo-11-slow-load",
+        "seo-2-slow-load",
+        "seo-9-slow-load"
+      ],
+      "priority": "Medium",
+      "evidence": [
+        "source row 13: page_load_ms=88.0; upper_quartile=83.5",
+        "source row 4: page_load_ms=91.0; upper_quartile=83.5",
+        "source row 11: page_load_ms=96.0; upper_quartile=83.5"
+      ],
+      "suggested_action": "Profile the pages and prioritize the largest measurable loading bottlenecks for optimization.",
+      "expected_business_outcome": "Improved page load times leading to better user experience and potential SEO ranking benefits.",
+      "measurement_method": "Measure page load times before and after optimizations using consistent tools.",
+      "implementation_effort": "Medium",
+      "confidence": "medium",
+      "assumptions": [
+        "Reducing page load times improves user experience and SEO.",
+        "Identified pages have measurable bottlenecks."
+      ],
+      "limitations": [
+        "No device, geography, or lab/field measurement context is supplied."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "b3eb9c263364e501d6d84a8b93d118909431d36a885f9ceba70f0288978930a2"
+    },
+    {
+      "recommendation_id": "rec-9",
+      "title": "Document and replicate content and linking patterns from strong SEO performers",
+      "category": "SEO",
+      "description": "Pages such as red-satin-evening-gown, rose-gold-prom-dress, and champagne-bridesmaid-dress show strong organic visibility with good position and CTR.",
+      "related_finding_ids": [
+        "seo-1-strong-visibility",
+        "seo-10-strong-visibility",
+        "seo-7-strong-visibility"
+      ],
+      "priority": "Medium",
+      "evidence": [
+        "source row 3: avg_position=4.3; organic_ctr_pct=3.0",
+        "source row 12: avg_position=5.6; organic_ctr_pct=3.0",
+        "source row 9: avg_position=3.8; organic_ctr_pct=5.0"
+      ],
+      "suggested_action": "Document the pages' content and internal-linking patterns for controlled reuse across other pages.",
+      "expected_business_outcome": "Improved SEO performance on additional pages by applying proven content and linking strategies.",
+      "measurement_method": "Track changes in average position and CTR on pages where patterns are applied.",
+      "implementation_effort": "Low",
+      "confidence": "medium",
+      "assumptions": [
+        "Content and linking patterns contribute to strong SEO performance.",
+        "Patterns can be effectively replicated on other pages."
+      ],
+      "limitations": [
+        "Current relative signals do not guarantee future or historical change."
+      ],
+      "review_status": "pending_review",
+      "reviewer_note": "",
+      "review_fingerprint": "e54d40327849708f2253eef0c61ca666ee4fab814a83130a81c916e7aeb987bf"
+    }
+  ],
+  "recommendations_status": "generated",
+  "recommendations_error": null,
+  "recommendations_error_category": null,
+  "llm_provider": "openrouter",
+  "llm_endpoint_profile": "openrouter_default",
+  "llm_model": "openai/gpt-4.1-mini",
+  "prompt_version": "recommendations-v2",
+  "review_file": "F:\\Python_learning\\ai_mktng_perf_analyzer\\reports\\recommendation_reviews.json",
+  "provenance": {
+    "ads": {
+      "filename": "ads_data.csv",
+      "sha256": "5e212740dcb00a9c09d67dd7e9c5cde48d1d8a89f97b9fba9297f52cf9c60884",
+      "size_bytes": 762,
+      "modified_at": "2026-11-11T18:10:27.570256+00:00",
+      "row_count": 10,
+      "column_count": 9
+    },
+    "seo": {
+      "filename": "seo_data.csv",
+      "sha256": "821ce08dc2eccf29563d288cd3bd59aaa23b43628ee45148c05b983ca4d3903b",
+      "size_bytes": 1649,
+      "modified_at": "2026-11-11T14:29:05.247589+00:00",
+      "row_count": 12,
+      "column_count": 10
+    }
+  },
+  "change_detection": {
+    "ads": {
+      "status": "unchanged",
+      "changed": false,
+      "previous_sha256": "5e212740dcb00a9c09d67dd7e9c5cde48d1d8a89f97b9fba9297f52cf9c60884",
+      "current_sha256": "5e212740dcb00a9c09d67dd7e9c5cde48d1d8a89f97b9fba9297f52cf9c60884"
+    },
+    "seo": {
+      "status": "unchanged",
+      "changed": false,
+      "previous_sha256": "821ce08dc2eccf29563d288cd3bd59aaa23b43628ee45148c05b983ca4d3903b",
+      "current_sha256": "821ce08dc2eccf29563d288cd3bd59aaa23b43628ee45148c05b983ca4d3903b"
+    },
+    "both_changed": false,
+    "any_changed": false
+  },
+  "data_quality": {
+    "ads": {
+      "dataset": "ads",
+      "row_count": 10,
+      "column_count": 9,
+      "missing_values": {
+        "campaign": 0,
+        "platform": 0,
+        "campaign_type": 0,
+        "spend_usd": 0,
+        "clicks": 0,
+        "purchases": 0,
+        "revenue_usd": 0,
+        "impressions": 0,
+        "reach": 0
+      },
+      "duplicate_rows": 0,
+      "issues": [],
+      "critical_error_count": 0,
+      "warning_count": 0,
+      "noteworthy_count": 0
+    },
+    "seo": {
+      "dataset": "seo",
+      "row_count": 12,
+      "column_count": 10,
+      "missing_values": {
+        "product_id": 0,
+        "product_name": 0,
+        "category": 0,
+        "url_slug": 0,
+        "description": 2,
+        "impressions_28d": 0,
+        "clicks_28d": 0,
+        "avg_position": 0,
+        "indexed": 0,
+        "page_load_ms": 0
+      },
+      "duplicate_rows": 0,
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "missing_value",
+          "message": "2 missing value(s)",
+          "column": "description",
+          "count": 2
+        }
+      ],
+      "critical_error_count": 0,
+      "warning_count": 2,
+      "noteworthy_count": 0
+    }
+  },
+  "ads": {
+    "row_count": 10,
+    "summary": {
+      "spend_usd": 6680.0,
+      "clicks": 14180.0,
+      "purchases": 286.0,
+      "revenue_usd": 32230.0,
+      "impressions": 872000.0,
+      "reach": 43600.0,
+      "ctr_pct": 1.6261,
+      "cpc_usd": 0.4711,
+      "cpa_usd": 23.3566,
+      "roas": 4.8249,
+      "conversion_rate_pct": 2.0169,
+      "cpm_usd": 7.6606,
+      "frequency": 20.0
+    },
+    "campaigns": [
+      {
+        "_source_row_number": 2,
+        "campaign": "Google Search - Prom",
+        "platform": "Google",
+        "campaign_type": "Search",
+        "spend_usd": 620,
+        "clicks": 1240,
+        "purchases": 31,
+        "revenue_usd": 3720,
+        "impressions": 48000,
+        "reach": 2100,
+        "ctr_pct": 2.5833,
+        "cpc_usd": 0.5,
+        "cpa_usd": 20.0,
+        "roas": 6.0,
+        "conversion_rate_pct": 2.5,
+        "cpm_usd": 12.9167,
+        "frequency": 22.8571
+      },
+      {
+        "_source_row_number": 3,
+        "campaign": "Google Shopping - Dresses",
+        "platform": "Google",
+        "campaign_type": "Shopping",
+        "spend_usd": 880,
+        "clicks": 1760,
+        "purchases": 22,
+        "revenue_usd": 2860,
+        "impressions": 73500,
+        "reach": 3900,
+        "ctr_pct": 2.3946,
+        "cpc_usd": 0.5,
+        "cpa_usd": 40.0,
+        "roas": 3.25,
+        "conversion_rate_pct": 1.25,
+        "cpm_usd": 11.9728,
+        "frequency": 18.8462
+      },
+      {
+        "_source_row_number": 4,
+        "campaign": "Meta - Retargeting",
+        "platform": "Meta",
+        "campaign_type": "Retargeting",
+        "spend_usd": 410,
+        "clicks": 820,
+        "purchases": 41,
+        "revenue_usd": 3280,
+        "impressions": 52000,
+        "reach": 1750,
+        "ctr_pct": 1.5769,
+        "cpc_usd": 0.5,
+        "cpa_usd": 10.0,
+        "roas": 8.0,
+        "conversion_rate_pct": 5.0,
+        "cpm_usd": 7.8846,
+        "frequency": 29.7143
+      },
+      {
+        "_source_row_number": 5,
+        "campaign": "Meta - Prospecting",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend_usd": 950,
+        "clicks": 1900,
+        "purchases": 19,
+        "revenue_usd": 2090,
+        "impressions": 146000,
+        "reach": 8200,
+        "ctr_pct": 1.3014,
+        "cpc_usd": 0.5,
+        "cpa_usd": 50.0,
+        "roas": 2.2,
+        "conversion_rate_pct": 1.0,
+        "cpm_usd": 6.5068,
+        "frequency": 17.8049
+      },
+      {
+        "_source_row_number": 6,
+        "campaign": "Google Search - Brand",
+        "platform": "Google",
+        "campaign_type": "Search",
+        "spend_usd": 240,
+        "clicks": 960,
+        "purchases": 48,
+        "revenue_usd": 5760,
+        "impressions": 18500,
+        "reach": 650,
+        "ctr_pct": 5.1892,
+        "cpc_usd": 0.25,
+        "cpa_usd": 5.0,
+        "roas": 24.0,
+        "conversion_rate_pct": 5.0,
+        "cpm_usd": 12.973,
+        "frequency": 28.4615
+      },
+      {
+        "_source_row_number": 7,
+        "campaign": "Meta - New Collection",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend_usd": 560,
+        "clicks": 1400,
+        "purchases": 28,
+        "revenue_usd": 3080,
+        "impressions": 97000,
+        "reach": 5100,
+        "ctr_pct": 1.4433,
+        "cpc_usd": 0.4,
+        "cpa_usd": 20.0,
+        "roas": 5.5,
+        "conversion_rate_pct": 2.0,
+        "cpm_usd": 5.7732,
+        "frequency": 19.0196
+      },
+      {
+        "_source_row_number": 8,
+        "campaign": "Google Performance Max",
+        "platform": "Google",
+        "campaign_type": "Performance Max",
+        "spend_usd": 1120,
+        "clicks": 2240,
+        "purchases": 28,
+        "revenue_usd": 3640,
+        "impressions": 168000,
+        "reach": 7600,
+        "ctr_pct": 1.3333,
+        "cpc_usd": 0.5,
+        "cpa_usd": 40.0,
+        "roas": 3.25,
+        "conversion_rate_pct": 1.25,
+        "cpm_usd": 6.6667,
+        "frequency": 22.1053
+      },
+      {
+        "_source_row_number": 9,
+        "campaign": "Meta - Lookalike",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend_usd": 730,
+        "clicks": 1460,
+        "purchases": 21,
+        "revenue_usd": 2520,
+        "impressions": 112000,
+        "reach": 6100,
+        "ctr_pct": 1.3036,
+        "cpc_usd": 0.5,
+        "cpa_usd": 34.7619,
+        "roas": 3.4521,
+        "conversion_rate_pct": 1.4384,
+        "cpm_usd": 6.5179,
+        "frequency": 18.3607
+      },
+      {
+        "_source_row_number": 10,
+        "campaign": "Google Search - Evening",
+        "platform": "Google",
+        "campaign_type": "Search",
+        "spend_usd": 490,
+        "clicks": 700,
+        "purchases": 14,
+        "revenue_usd": 1540,
+        "impressions": 36000,
+        "reach": 1300,
+        "ctr_pct": 1.9444,
+        "cpc_usd": 0.7,
+        "cpa_usd": 35.0,
+        "roas": 3.1429,
+        "conversion_rate_pct": 2.0,
+        "cpm_usd": 13.6111,
+        "frequency": 27.6923
+      },
+      {
+        "_source_row_number": 11,
+        "campaign": "Meta - Sale Creative",
+        "platform": "Meta",
+        "campaign_type": "Prospecting",
+        "spend_usd": 680,
+        "clicks": 1700,
+        "purchases": 34,
+        "revenue_usd": 3740,
+        "impressions": 121000,
+        "reach": 6900,
+        "ctr_pct": 1.405,
+        "cpc_usd": 0.4,
+        "cpa_usd": 20.0,
+        "roas": 5.5,
+        "conversion_rate_pct": 2.0,
+        "cpm_usd": 5.6198,
+        "frequency": 17.5362
+      }
+    ],
+    "by_platform": [
+      {
+        "platform": "Google",
+        "spend_usd": 3350,
+        "clicks": 6900,
+        "purchases": 143,
+        "revenue_usd": 17520,
+        "impressions": 344000,
+        "reach": 15550,
+        "ctr_pct": 2.0058,
+        "cpc_usd": 0.4855,
+        "cpa_usd": 23.4266,
+        "roas": 5.2299,
+        "conversion_rate_pct": 2.0725,
+        "cpm_usd": 9.7384,
+        "frequency": 22.1222
+      },
+      {
+        "platform": "Meta",
+        "spend_usd": 3330,
+        "clicks": 7280,
+        "purchases": 143,
+        "revenue_usd": 14710,
+        "impressions": 528000,
+        "reach": 28050,
+        "ctr_pct": 1.3788,
+        "cpc_usd": 0.4574,
+        "cpa_usd": 23.2867,
+        "roas": 4.4174,
+        "conversion_rate_pct": 1.9643,
+        "cpm_usd": 6.3068,
+        "frequency": 18.8235
+      }
+    ],
+    "by_campaign_type": [
+      {
+        "campaign_type": "Performance Max",
+        "spend_usd": 1120,
+        "clicks": 2240,
+        "purchases": 28,
+        "revenue_usd": 3640,
+        "impressions": 168000,
+        "reach": 7600,
+        "ctr_pct": 1.3333,
+        "cpc_usd": 0.5,
+        "cpa_usd": 40.0,
+        "roas": 3.25,
+        "conversion_rate_pct": 1.25,
+        "cpm_usd": 6.6667,
+        "frequency": 22.1053
+      },
+      {
+        "campaign_type": "Prospecting",
+        "spend_usd": 2920,
+        "clicks": 6460,
+        "purchases": 102,
+        "revenue_usd": 11430,
+        "impressions": 476000,
+        "reach": 26300,
+        "ctr_pct": 1.3571,
+        "cpc_usd": 0.452,
+        "cpa_usd": 28.6275,
+        "roas": 3.9144,
+        "conversion_rate_pct": 1.5789,
+        "cpm_usd": 6.1345,
+        "frequency": 18.0989
+      },
+      {
+        "campaign_type": "Retargeting",
+        "spend_usd": 410,
+        "clicks": 820,
+        "purchases": 41,
+        "revenue_usd": 3280,
+        "impressions": 52000,
+        "reach": 1750,
+        "ctr_pct": 1.5769,
+        "cpc_usd": 0.5,
+        "cpa_usd": 10.0,
+        "roas": 8.0,
+        "conversion_rate_pct": 5.0,
+        "cpm_usd": 7.8846,
+        "frequency": 29.7143
+      },
+      {
+        "campaign_type": "Search",
+        "spend_usd": 1350,
+        "clicks": 2900,
+        "purchases": 93,
+        "revenue_usd": 11020,
+        "impressions": 102500,
+        "reach": 4050,
+        "ctr_pct": 2.8293,
+        "cpc_usd": 0.4655,
+        "cpa_usd": 14.5161,
+        "roas": 8.163,
+        "conversion_rate_pct": 3.2069,
+        "cpm_usd": 13.1707,
+        "frequency": 25.3086
+      },
+      {
+        "campaign_type": "Shopping",
+        "spend_usd": 880,
+        "clicks": 1760,
+        "purchases": 22,
+        "revenue_usd": 2860,
+        "impressions": 73500,
+        "reach": 3900,
+        "ctr_pct": 2.3946,
+        "cpc_usd": 0.5,
+        "cpa_usd": 40.0,
+        "roas": 3.25,
+        "conversion_rate_pct": 1.25,
+        "cpm_usd": 11.9728,
+        "frequency": 18.8462
+      }
+    ]
+  },
+  "seo": {
+    "row_count": 12,
+    "pages": [
+      {
+        "_source_row_number": 2,
+        "product_id": "P-101",
+        "product_name": "Black Mermaid Prom Dress",
+        "category": "Prom Dresses",
+        "url_slug": "black-mermaid-prom-dress",
+        "description": "Black off-shoulder mermaid prom dress with a fitted silhouette.",
+        "impressions_28d": 52000,
+        "clicks_28d": 410,
+        "avg_position": 11.8,
+        "indexed": true,
+        "page_load_ms": 68,
+        "organic_ctr_pct": 0.7885
+      },
+      {
+        "_source_row_number": 3,
+        "product_id": "P-102",
+        "product_name": "Red Satin Evening Gown",
+        "category": "Evening Dresses",
+        "url_slug": "red-satin-evening-gown",
+        "description": "Red satin evening gown with a floor-length skirt.",
+        "impressions_28d": 31800,
+        "clicks_28d": 954,
+        "avg_position": 4.3,
+        "indexed": true,
+        "page_load_ms": 54,
+        "organic_ctr_pct": 3.0
+      },
+      {
+        "_source_row_number": 4,
+        "product_id": "P-103",
+        "product_name": "Blue Cocktail Dress",
+        "category": "Cocktail Dresses",
+        "url_slug": "blue-cocktail-dress",
+        "description": null,
+        "impressions_28d": 21400,
+        "clicks_28d": 107,
+        "avg_position": 17.6,
+        "indexed": true,
+        "page_load_ms": 91,
+        "organic_ctr_pct": 0.5
+      },
+      {
+        "_source_row_number": 5,
+        "product_id": "P-104",
+        "product_name": "Navy Formal Dress",
+        "category": "Formal Dresses",
+        "url_slug": "navy-formal-dress",
+        "description": "Navy formal dress for weddings and special occasions.",
+        "impressions_28d": 12600,
+        "clicks_28d": 189,
+        "avg_position": 8.9,
+        "indexed": false,
+        "page_load_ms": 73,
+        "organic_ctr_pct": 1.5
+      },
+      {
+        "_source_row_number": 6,
+        "product_id": "P-105",
+        "product_name": "Sequin Party Gown",
+        "category": "Party Dresses",
+        "url_slug": "sequin-party-gown",
+        "description": "Silver sequin party gown with a fitted waist.",
+        "impressions_28d": 9800,
+        "clicks_28d": 392,
+        "avg_position": 6.1,
+        "indexed": true,
+        "page_load_ms": 49,
+        "organic_ctr_pct": 4.0
+      },
+      {
+        "_source_row_number": 7,
+        "product_id": "P-106",
+        "product_name": "Floral Maxi Dress",
+        "category": "Maxi Dresses",
+        "url_slug": "floral-maxi-dress",
+        "description": "Floral print maxi dress with a flowing skirt.",
+        "impressions_28d": 7600,
+        "clicks_28d": 152,
+        "avg_position": 14.2,
+        "indexed": true,
+        "page_load_ms": 82,
+        "organic_ctr_pct": 2.0
+      },
+      {
+        "_source_row_number": 8,
+        "product_id": "P-107",
+        "product_name": "Black Off Shoulder Gown",
+        "category": "Prom Dresses",
+        "url_slug": "black-off-shoulder-gown",
+        "description": "Elegant black off-shoulder gown for prom.",
+        "impressions_28d": 44000,
+        "clicks_28d": 308,
+        "avg_position": 13.1,
+        "indexed": true,
+        "page_load_ms": 62,
+        "organic_ctr_pct": 0.7
+      },
+      {
+        "_source_row_number": 9,
+        "product_id": "P-108",
+        "product_name": "Champagne Bridesmaid Dress",
+        "category": "Bridesmaid Dresses",
+        "url_slug": "champagne-bridesmaid-dress",
+        "description": "Champagne chiffon bridesmaid dress.",
+        "impressions_28d": 15300,
+        "clicks_28d": 765,
+        "avg_position": 3.8,
+        "indexed": true,
+        "page_load_ms": 57,
+        "organic_ctr_pct": 5.0
+      },
+      {
+        "_source_row_number": 10,
+        "product_id": "P-109",
+        "product_name": "Green Satin Midi Dress",
+        "category": "Cocktail Dresses",
+        "url_slug": "green-satin-midi-dress",
+        "description": "Green satin midi dress for evening events.",
+        "impressions_28d": 8900,
+        "clicks_28d": 267,
+        "avg_position": 7.4,
+        "indexed": true,
+        "page_load_ms": 46,
+        "organic_ctr_pct": 3.0
+      },
+      {
+        "_source_row_number": 11,
+        "product_id": "P-110",
+        "product_name": "Long Sleeve Evening Dress",
+        "category": "Evening Dresses",
+        "url_slug": "long-sleeve-evening-dress",
+        "description": null,
+        "impressions_28d": 18100,
+        "clicks_28d": 181,
+        "avg_position": 19.3,
+        "indexed": false,
+        "page_load_ms": 96,
+        "organic_ctr_pct": 1.0
+      },
+      {
+        "_source_row_number": 12,
+        "product_id": "P-111",
+        "product_name": "Rose Gold Prom Dress",
+        "category": "Prom Dresses",
+        "url_slug": "rose-gold-prom-dress",
+        "description": "Rose gold prom dress with embellished bodice.",
+        "impressions_28d": 27300,
+        "clicks_28d": 819,
+        "avg_position": 5.6,
+        "indexed": true,
+        "page_load_ms": 51,
+        "organic_ctr_pct": 3.0
+      },
+      {
+        "_source_row_number": 13,
+        "product_id": "P-112",
+        "product_name": "Ivory Formal Gown",
+        "category": "Formal Dresses",
+        "url_slug": "ivory-formal-gown",
+        "description": "Ivory formal gown with a floor-length silhouette.",
+        "impressions_28d": 6100,
+        "clicks_28d": 61,
+        "avg_position": 22.4,
+        "indexed": true,
+        "page_load_ms": 88,
+        "organic_ctr_pct": 1.0
+      }
+    ],
+    "summary": {
+      "total_impressions_28d": 254900,
+      "total_clicks_28d": 4605,
+      "organic_ctr_pct": 1.8066,
+      "average_search_position": 11.2083,
+      "indexed_page_percentage": 83.3333,
+      "non_indexed_page_count": 2,
+      "average_page_load_ms": 68.0833
+    },
+    "by_category": [
+      {
+        "category": "Bridesmaid Dresses",
+        "pages": 1,
+        "impressions_28d": 15300,
+        "clicks_28d": 765,
+        "avg_position": 3.8,
+        "average_page_load_ms": 57.0,
+        "organic_ctr_pct": 5.0
+      },
+      {
+        "category": "Cocktail Dresses",
+        "pages": 2,
+        "impressions_28d": 30300,
+        "clicks_28d": 374,
+        "avg_position": 12.5,
+        "average_page_load_ms": 68.5,
+        "organic_ctr_pct": 1.2343
+      },
+      {
+        "category": "Evening Dresses",
+        "pages": 2,
+        "impressions_28d": 49900,
+        "clicks_28d": 1135,
+        "avg_position": 11.8,
+        "average_page_load_ms": 75.0,
+        "organic_ctr_pct": 2.2745
+      },
+      {
+        "category": "Formal Dresses",
+        "pages": 2,
+        "impressions_28d": 18700,
+        "clicks_28d": 250,
+        "avg_position": 15.65,
+        "average_page_load_ms": 80.5,
+        "organic_ctr_pct": 1.3369
+      },
+      {
+        "category": "Maxi Dresses",
+        "pages": 1,
+        "impressions_28d": 7600,
+        "clicks_28d": 152,
+        "avg_position": 14.2,
+        "average_page_load_ms": 82.0,
+        "organic_ctr_pct": 2.0
+      },
+      {
+        "category": "Party Dresses",
+        "pages": 1,
+        "impressions_28d": 9800,
+        "clicks_28d": 392,
+        "avg_position": 6.1,
+        "average_page_load_ms": 49.0,
+        "organic_ctr_pct": 4.0
+      },
+      {
+        "category": "Prom Dresses",
+        "pages": 3,
+        "impressions_28d": 123300,
+        "clicks_28d": 1537,
+        "avg_position": 10.1667,
+        "average_page_load_ms": 60.3333,
+        "organic_ctr_pct": 1.2466
+      }
+    ]
+  },
+  "insights": [
+    {
+      "finding_id": "ads-0-high-roas",
+      "category": "opportunity",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Search - Prom",
+      "title": "High-ROAS opportunity: Google Search - Prom",
+      "description": "ROAS is in the upper quartile of the supplied campaigns.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.75,
+      "supporting_metrics": {
+        "roas": 6.0,
+        "spend_usd": 620.0
+      },
+      "evidence": [
+        "source row 2: roas=6.0; upper_quartile=5.875"
+      ],
+      "business_interpretation": "ROAS is in the upper quartile of the supplied campaigns.",
+      "limitations": [
+        "High ROAS alone does not establish incremental scalability or causal performance."
+      ],
+      "recommended_action": "Run a controlled review of whether learnings can be replicated; do not automatically increase budget.",
+      "dataset": "advertising",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 45.0,
+        "actionability": 65.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is in the upper quartile of the supplied campaigns.",
+      "entity": "Google Search - Prom"
+    },
+    {
+      "finding_id": "ads-0-meaningful-revenue",
+      "category": "opportunity",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Search - Prom",
+      "title": "Meaningful revenue contribution: Google Search - Prom",
+      "description": "Revenue is in the upper quartile of supplied campaigns.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 67.5,
+      "supporting_metrics": {
+        "revenue_usd": 3720.0,
+        "purchases": 31.0
+      },
+      "evidence": [
+        "source row 2: revenue_usd=3720.0; upper_quartile=3700.0"
+      ],
+      "business_interpretation": "Revenue is in the upper quartile of supplied campaigns.",
+      "limitations": [
+        "Revenue contribution is observed; incrementality and margin are unavailable."
+      ],
+      "recommended_action": "Protect the campaign's measured revenue contribution while checking incrementality and conversion quality.",
+      "dataset": "advertising",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 75.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 60.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "Revenue is in the upper quartile of supplied campaigns.",
+      "entity": "Google Search - Prom"
+    },
+    {
+      "finding_id": "ads-1-high-spend",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Shopping - Dresses",
+      "title": "High-spend campaign: Google Shopping - Dresses",
+      "description": "Spend is in the upper quartile of the supplied campaigns.",
+      "severity": "High",
+      "impact_score": 75.0,
+      "priority_score": 75.25,
+      "supporting_metrics": {
+        "spend_usd": 880.0
+      },
+      "evidence": [
+        "source row 3: spend_usd=880.0"
+      ],
+      "business_interpretation": "Spend is in the upper quartile of the supplied campaigns.",
+      "limitations": [
+        "Relative to this dataset only; no budget target is available."
+      ],
+      "recommended_action": "Review spend allocation alongside conversions, revenue and ROAS.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 80.0,
+        "reach_or_visibility": 60.0,
+        "actionability": 75.0,
+        "evidence_confidence": 95.0
+      },
+      "detail": "Spend is in the upper quartile of the supplied campaigns.",
+      "entity": "Google Shopping - Dresses"
+    },
+    {
+      "finding_id": "ads-1-low-roas",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Shopping - Dresses",
+      "title": "Below-peer ROAS: Google Shopping - Dresses",
+      "description": "ROAS is below the campaign median while spend is at or above the median.",
+      "severity": "High",
+      "impact_score": 75.0,
+      "priority_score": 70.75,
+      "supporting_metrics": {
+        "roas": 3.25,
+        "spend_usd": 880.0
+      },
+      "evidence": [
+        "source row 3: roas=3.25; peer_median_roas=4.476027397260274"
+      ],
+      "business_interpretation": "ROAS is below the campaign median while spend is at or above the median.",
+      "limitations": [
+        "A lower relative ROAS is not proof of unprofitability without business margin targets."
+      ],
+      "recommended_action": "Investigate creative, audience, placement and landing-page efficiency before changing budget.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 70.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is below the campaign median while spend is at or above the median.",
+      "entity": "Google Shopping - Dresses"
+    },
+    {
+      "finding_id": "ads-1-low-conversion",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Shopping - Dresses",
+      "title": "Below-peer conversion rate: Google Shopping - Dresses",
+      "description": "Conversion rate is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "conversion_rate_pct": 1.25
+      },
+      "evidence": [
+        "source row 3: conversion_rate_pct=1.25; peer_median=2.0"
+      ],
+      "business_interpretation": "Conversion rate is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Conversion rate is below the campaign median.",
+      "entity": "Google Shopping - Dresses"
+    },
+    {
+      "finding_id": "ads-2-high-roas",
+      "category": "opportunity",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Retargeting",
+      "title": "High-ROAS opportunity: Meta - Retargeting",
+      "description": "ROAS is in the upper quartile of the supplied campaigns.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.75,
+      "supporting_metrics": {
+        "roas": 8.0,
+        "spend_usd": 410.0
+      },
+      "evidence": [
+        "source row 4: roas=8.0; upper_quartile=5.875"
+      ],
+      "business_interpretation": "ROAS is in the upper quartile of the supplied campaigns.",
+      "limitations": [
+        "High ROAS alone does not establish incremental scalability or causal performance."
+      ],
+      "recommended_action": "Run a controlled review of whether learnings can be replicated; do not automatically increase budget.",
+      "dataset": "advertising",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 45.0,
+        "actionability": 65.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is in the upper quartile of the supplied campaigns.",
+      "entity": "Meta - Retargeting"
+    },
+    {
+      "finding_id": "ads-3-high-spend",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Prospecting",
+      "title": "High-spend campaign: Meta - Prospecting",
+      "description": "Spend is in the upper quartile of the supplied campaigns.",
+      "severity": "High",
+      "impact_score": 75.0,
+      "priority_score": 77.75,
+      "supporting_metrics": {
+        "spend_usd": 950.0
+      },
+      "evidence": [
+        "source row 5: spend_usd=950.0"
+      ],
+      "business_interpretation": "Spend is in the upper quartile of the supplied campaigns.",
+      "limitations": [
+        "Relative to this dataset only; no budget target is available."
+      ],
+      "recommended_action": "Review spend allocation alongside conversions, revenue and ROAS.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 90.0,
+        "reach_or_visibility": 60.0,
+        "actionability": 75.0,
+        "evidence_confidence": 95.0
+      },
+      "detail": "Spend is in the upper quartile of the supplied campaigns.",
+      "entity": "Meta - Prospecting"
+    },
+    {
+      "finding_id": "ads-3-low-roas",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Prospecting",
+      "title": "Below-peer ROAS: Meta - Prospecting",
+      "description": "ROAS is below the campaign median while spend is at or above the median.",
+      "severity": "High",
+      "impact_score": 75.0,
+      "priority_score": 70.75,
+      "supporting_metrics": {
+        "roas": 2.2,
+        "spend_usd": 950.0
+      },
+      "evidence": [
+        "source row 5: roas=2.2; peer_median_roas=4.476027397260274"
+      ],
+      "business_interpretation": "ROAS is below the campaign median while spend is at or above the median.",
+      "limitations": [
+        "A lower relative ROAS is not proof of unprofitability without business margin targets."
+      ],
+      "recommended_action": "Investigate creative, audience, placement and landing-page efficiency before changing budget.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 70.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is below the campaign median while spend is at or above the median.",
+      "entity": "Meta - Prospecting"
+    },
+    {
+      "finding_id": "ads-3-low-conversion",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Prospecting",
+      "title": "Below-peer conversion rate: Meta - Prospecting",
+      "description": "Conversion rate is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "conversion_rate_pct": 1.0
+      },
+      "evidence": [
+        "source row 5: conversion_rate_pct=1.0; peer_median=2.0"
+      ],
+      "business_interpretation": "Conversion rate is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Conversion rate is below the campaign median.",
+      "entity": "Meta - Prospecting"
+    },
+    {
+      "finding_id": "ads-3-low-ctr",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Prospecting",
+      "title": "Below-peer CTR: Meta - Prospecting",
+      "description": "Ctr is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "ctr_pct": 1.3013698630136987
+      },
+      "evidence": [
+        "source row 5: ctr_pct=1.3013698630136987; peer_median=1.510111022997621"
+      ],
+      "business_interpretation": "Ctr is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Ctr is below the campaign median.",
+      "entity": "Meta - Prospecting"
+    },
+    {
+      "finding_id": "ads-4-high-roas",
+      "category": "opportunity",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Search - Brand",
+      "title": "High-ROAS opportunity: Google Search - Brand",
+      "description": "ROAS is in the upper quartile of the supplied campaigns.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.75,
+      "supporting_metrics": {
+        "roas": 24.0,
+        "spend_usd": 240.0
+      },
+      "evidence": [
+        "source row 6: roas=24.0; upper_quartile=5.875"
+      ],
+      "business_interpretation": "ROAS is in the upper quartile of the supplied campaigns.",
+      "limitations": [
+        "High ROAS alone does not establish incremental scalability or causal performance."
+      ],
+      "recommended_action": "Run a controlled review of whether learnings can be replicated; do not automatically increase budget.",
+      "dataset": "advertising",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 45.0,
+        "actionability": 65.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is in the upper quartile of the supplied campaigns.",
+      "entity": "Google Search - Brand"
+    },
+    {
+      "finding_id": "ads-4-meaningful-revenue",
+      "category": "opportunity",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Search - Brand",
+      "title": "Meaningful revenue contribution: Google Search - Brand",
+      "description": "Revenue is in the upper quartile of supplied campaigns.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 67.5,
+      "supporting_metrics": {
+        "revenue_usd": 5760.0,
+        "purchases": 48.0
+      },
+      "evidence": [
+        "source row 6: revenue_usd=5760.0; upper_quartile=3700.0"
+      ],
+      "business_interpretation": "Revenue is in the upper quartile of supplied campaigns.",
+      "limitations": [
+        "Revenue contribution is observed; incrementality and margin are unavailable."
+      ],
+      "recommended_action": "Protect the campaign's measured revenue contribution while checking incrementality and conversion quality.",
+      "dataset": "advertising",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 75.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 60.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "Revenue is in the upper quartile of supplied campaigns.",
+      "entity": "Google Search - Brand"
+    },
+    {
+      "finding_id": "ads-5-low-ctr",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - New Collection",
+      "title": "Below-peer CTR: Meta - New Collection",
+      "description": "Ctr is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "ctr_pct": 1.443298969072165
+      },
+      "evidence": [
+        "source row 7: ctr_pct=1.443298969072165; peer_median=1.510111022997621"
+      ],
+      "business_interpretation": "Ctr is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Ctr is below the campaign median.",
+      "entity": "Meta - New Collection"
+    },
+    {
+      "finding_id": "ads-6-high-spend",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Performance Max",
+      "title": "High-spend campaign: Google Performance Max",
+      "description": "Spend is in the upper quartile of the supplied campaigns.",
+      "severity": "Critical",
+      "impact_score": 75.0,
+      "priority_score": 80.25,
+      "supporting_metrics": {
+        "spend_usd": 1120.0
+      },
+      "evidence": [
+        "source row 8: spend_usd=1120.0"
+      ],
+      "business_interpretation": "Spend is in the upper quartile of the supplied campaigns.",
+      "limitations": [
+        "Relative to this dataset only; no budget target is available."
+      ],
+      "recommended_action": "Review spend allocation alongside conversions, revenue and ROAS.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "Critical",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 100.0,
+        "reach_or_visibility": 60.0,
+        "actionability": 75.0,
+        "evidence_confidence": 95.0
+      },
+      "detail": "Spend is in the upper quartile of the supplied campaigns.",
+      "entity": "Google Performance Max"
+    },
+    {
+      "finding_id": "ads-6-low-roas",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Performance Max",
+      "title": "Below-peer ROAS: Google Performance Max",
+      "description": "ROAS is below the campaign median while spend is at or above the median.",
+      "severity": "High",
+      "impact_score": 75.0,
+      "priority_score": 70.75,
+      "supporting_metrics": {
+        "roas": 3.25,
+        "spend_usd": 1120.0
+      },
+      "evidence": [
+        "source row 8: roas=3.25; peer_median_roas=4.476027397260274"
+      ],
+      "business_interpretation": "ROAS is below the campaign median while spend is at or above the median.",
+      "limitations": [
+        "A lower relative ROAS is not proof of unprofitability without business margin targets."
+      ],
+      "recommended_action": "Investigate creative, audience, placement and landing-page efficiency before changing budget.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 70.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is below the campaign median while spend is at or above the median.",
+      "entity": "Google Performance Max"
+    },
+    {
+      "finding_id": "ads-6-low-conversion",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Performance Max",
+      "title": "Below-peer conversion rate: Google Performance Max",
+      "description": "Conversion rate is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "conversion_rate_pct": 1.25
+      },
+      "evidence": [
+        "source row 8: conversion_rate_pct=1.25; peer_median=2.0"
+      ],
+      "business_interpretation": "Conversion rate is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Conversion rate is below the campaign median.",
+      "entity": "Google Performance Max"
+    },
+    {
+      "finding_id": "ads-6-low-ctr",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Google Performance Max",
+      "title": "Below-peer CTR: Google Performance Max",
+      "description": "Ctr is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "ctr_pct": 1.3333333333333335
+      },
+      "evidence": [
+        "source row 8: ctr_pct=1.3333333333333335; peer_median=1.510111022997621"
+      ],
+      "business_interpretation": "Ctr is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Ctr is below the campaign median.",
+      "entity": "Google Performance Max"
+    },
+    {
+      "finding_id": "ads-7-low-roas",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Lookalike",
+      "title": "Below-peer ROAS: Meta - Lookalike",
+      "description": "ROAS is below the campaign median while spend is at or above the median.",
+      "severity": "High",
+      "impact_score": 75.0,
+      "priority_score": 70.75,
+      "supporting_metrics": {
+        "roas": 3.452054794520548,
+        "spend_usd": 730.0
+      },
+      "evidence": [
+        "source row 9: roas=3.452054794520548; peer_median_roas=4.476027397260274"
+      ],
+      "business_interpretation": "ROAS is below the campaign median while spend is at or above the median.",
+      "limitations": [
+        "A lower relative ROAS is not proof of unprofitability without business margin targets."
+      ],
+      "recommended_action": "Investigate creative, audience, placement and landing-page efficiency before changing budget.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 75.0,
+        "financial_exposure_or_opportunity": 70.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 70.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "ROAS is below the campaign median while spend is at or above the median.",
+      "entity": "Meta - Lookalike"
+    },
+    {
+      "finding_id": "ads-7-low-conversion",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Lookalike",
+      "title": "Below-peer conversion rate: Meta - Lookalike",
+      "description": "Conversion rate is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "conversion_rate_pct": 1.4383561643835616
+      },
+      "evidence": [
+        "source row 9: conversion_rate_pct=1.4383561643835616; peer_median=2.0"
+      ],
+      "business_interpretation": "Conversion rate is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Conversion rate is below the campaign median.",
+      "entity": "Meta - Lookalike"
+    },
+    {
+      "finding_id": "ads-7-low-ctr",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Lookalike",
+      "title": "Below-peer CTR: Meta - Lookalike",
+      "description": "Ctr is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "ctr_pct": 1.3035714285714286
+      },
+      "evidence": [
+        "source row 9: ctr_pct=1.3035714285714286; peer_median=1.510111022997621"
+      ],
+      "business_interpretation": "Ctr is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Ctr is below the campaign median.",
+      "entity": "Meta - Lookalike"
+    },
+    {
+      "finding_id": "ads-9-low-ctr",
+      "category": "problem",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Sale Creative",
+      "title": "Below-peer CTR: Meta - Sale Creative",
+      "description": "Ctr is below the campaign median.",
+      "severity": "High",
+      "impact_score": 55.0,
+      "priority_score": 60.0,
+      "supporting_metrics": {
+        "ctr_pct": 1.4049586776859504
+      },
+      "evidence": [
+        "source row 11: ctr_pct=1.4049586776859504; peer_median=1.510111022997621"
+      ],
+      "business_interpretation": "Ctr is below the campaign median.",
+      "limitations": [
+        "A relative result is not an absolute failure without campaign objectives."
+      ],
+      "recommended_action": "Compare this campaign with stronger peers and test the most relevant creative or audience variable.",
+      "dataset": "advertising",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 55.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Ctr is below the campaign median.",
+      "entity": "Meta - Sale Creative"
+    },
+    {
+      "finding_id": "ads-9-meaningful-revenue",
+      "category": "opportunity",
+      "source_dataset": "Advertising",
+      "entity_name": "Meta - Sale Creative",
+      "title": "Meaningful revenue contribution: Meta - Sale Creative",
+      "description": "Revenue is in the upper quartile of supplied campaigns.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 67.5,
+      "supporting_metrics": {
+        "revenue_usd": 3740.0,
+        "purchases": 34.0
+      },
+      "evidence": [
+        "source row 11: revenue_usd=3740.0; upper_quartile=3700.0"
+      ],
+      "business_interpretation": "Revenue is in the upper quartile of supplied campaigns.",
+      "limitations": [
+        "Revenue contribution is observed; incrementality and margin are unavailable."
+      ],
+      "recommended_action": "Protect the campaign's measured revenue contribution while checking incrementality and conversion quality.",
+      "dataset": "advertising",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 75.0,
+        "reach_or_visibility": 55.0,
+        "actionability": 60.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "Revenue is in the upper quartile of supplied campaigns.",
+      "entity": "Meta - Sale Creative"
+    },
+    {
+      "finding_id": "seo-0-high-impression-low-ctr",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "black-mermaid-prom-dress",
+      "title": "High-impression, below-peer CTR page: black-mermaid-prom-dress",
+      "description": "The page has at least median impressions but below-median organic CTR.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.0,
+      "supporting_metrics": {
+        "impressions_28d": 52000.0,
+        "organic_ctr_pct": 0.7884615384615384
+      },
+      "evidence": [
+        "source row 2: impressions_28d=52000.0; organic_ctr_pct=0.7884615384615384; peer_median_ctr=1.75"
+      ],
+      "business_interpretation": "The page has at least median impressions but below-median organic CTR.",
+      "limitations": [
+        "CTR varies with query mix and position; 28-day aggregate data has no history."
+      ],
+      "recommended_action": "Review title, snippet and search-intent alignment while considering average position.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 35.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 75.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "The page has at least median impressions but below-median organic CTR.",
+      "entity": "black-mermaid-prom-dress"
+    },
+    {
+      "finding_id": "seo-1-strong-visibility",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "red-satin-evening-gown",
+      "title": "Strong organic visibility: red-satin-evening-gown",
+      "description": "The page combines stronger relative position with at least median CTR.",
+      "severity": "Medium",
+      "impact_score": 45.0,
+      "priority_score": 48.5,
+      "supporting_metrics": {
+        "avg_position": 4.3,
+        "organic_ctr_pct": 3.0
+      },
+      "evidence": [
+        "source row 3: avg_position=4.3; organic_ctr_pct=3.0"
+      ],
+      "business_interpretation": "The page combines stronger relative position with at least median CTR.",
+      "limitations": [
+        "This is a current relative signal, not evidence of future or historical change."
+      ],
+      "recommended_action": "Document the page's content and internal-linking patterns for controlled reuse.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 45.0,
+        "financial_exposure_or_opportunity": 15.0,
+        "reach_or_visibility": 75.0,
+        "actionability": 55.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "The page combines stronger relative position with at least median CTR.",
+      "entity": "red-satin-evening-gown"
+    },
+    {
+      "finding_id": "seo-2-high-impression-low-ctr",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "blue-cocktail-dress",
+      "title": "High-impression, below-peer CTR page: blue-cocktail-dress",
+      "description": "The page has at least median impressions but below-median organic CTR.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.0,
+      "supporting_metrics": {
+        "impressions_28d": 21400.0,
+        "organic_ctr_pct": 0.5
+      },
+      "evidence": [
+        "source row 4: impressions_28d=21400.0; organic_ctr_pct=0.5; peer_median_ctr=1.75"
+      ],
+      "business_interpretation": "The page has at least median impressions but below-median organic CTR.",
+      "limitations": [
+        "CTR varies with query mix and position; 28-day aggregate data has no history."
+      ],
+      "recommended_action": "Review title, snippet and search-intent alignment while considering average position.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 35.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 75.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "The page has at least median impressions but below-median organic CTR.",
+      "entity": "blue-cocktail-dress"
+    },
+    {
+      "finding_id": "seo-2-weak-visibility",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "blue-cocktail-dress",
+      "title": "Weaker search visibility: blue-cocktail-dress",
+      "description": "Average position is in the weaker quartile of supplied pages.",
+      "severity": "Medium",
+      "impact_score": 55.0,
+      "priority_score": 55.25,
+      "supporting_metrics": {
+        "avg_position": 17.6
+      },
+      "evidence": [
+        "source row 4: avg_position=17.6; upper_quartile=15.05"
+      ],
+      "business_interpretation": "Average position is in the weaker quartile of supplied pages.",
+      "limitations": [
+        "Average position is a 28-day aggregate and is not a historical trend."
+      ],
+      "recommended_action": "Review page relevance, internal links and content coverage for the queries represented.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 20.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 65.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Average position is in the weaker quartile of supplied pages.",
+      "entity": "blue-cocktail-dress"
+    },
+    {
+      "finding_id": "seo-2-slow-load",
+      "category": "problem",
+      "source_dataset": "SEO",
+      "entity_name": "blue-cocktail-dress",
+      "title": "Comparatively slow page load: blue-cocktail-dress",
+      "description": "Page load time is in the upper quartile of supplied pages.",
+      "severity": "Medium",
+      "impact_score": 45.0,
+      "priority_score": 48.5,
+      "supporting_metrics": {
+        "page_load_ms": 91.0
+      },
+      "evidence": [
+        "source row 4: page_load_ms=91.0; upper_quartile=83.5"
+      ],
+      "business_interpretation": "Page load time is in the upper quartile of supplied pages.",
+      "limitations": [
+        "No device, geography or lab/field measurement context is supplied."
+      ],
+      "recommended_action": "Profile the page and prioritise the largest measurable loading bottlenecks.",
+      "dataset": "seo",
+      "type": "problem",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 45.0,
+        "financial_exposure_or_opportunity": 15.0,
+        "reach_or_visibility": 65.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Page load time is in the upper quartile of supplied pages.",
+      "entity": "blue-cocktail-dress"
+    },
+    {
+      "finding_id": "seo-3-not-indexed",
+      "category": "problem",
+      "source_dataset": "SEO",
+      "entity_name": "navy-formal-dress",
+      "title": "Non-indexed page: navy-formal-dress",
+      "description": "The page is marked as not indexed.",
+      "severity": "High",
+      "impact_score": 70.0,
+      "priority_score": 64.5,
+      "supporting_metrics": {
+        "indexed": false
+      },
+      "evidence": [
+        "source row 5: indexed=False"
+      ],
+      "business_interpretation": "The page is marked as not indexed.",
+      "limitations": [
+        "The dataset does not explain why the page is not indexed."
+      ],
+      "recommended_action": "Inspect indexability, canonicalisation, robots directives and sitemap coverage.",
+      "dataset": "seo",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 70.0,
+        "financial_exposure_or_opportunity": 20.0,
+        "reach_or_visibility": 85.0,
+        "actionability": 85.0,
+        "evidence_confidence": 95.0
+      },
+      "detail": "The page is marked as not indexed.",
+      "entity": "navy-formal-dress"
+    },
+    {
+      "finding_id": "seo-6-high-impression-low-ctr",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "black-off-shoulder-gown",
+      "title": "High-impression, below-peer CTR page: black-off-shoulder-gown",
+      "description": "The page has at least median impressions but below-median organic CTR.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.0,
+      "supporting_metrics": {
+        "impressions_28d": 44000.0,
+        "organic_ctr_pct": 0.7000000000000001
+      },
+      "evidence": [
+        "source row 8: impressions_28d=44000.0; organic_ctr_pct=0.7000000000000001; peer_median_ctr=1.75"
+      ],
+      "business_interpretation": "The page has at least median impressions but below-median organic CTR.",
+      "limitations": [
+        "CTR varies with query mix and position; 28-day aggregate data has no history."
+      ],
+      "recommended_action": "Review title, snippet and search-intent alignment while considering average position.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 35.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 75.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "The page has at least median impressions but below-median organic CTR.",
+      "entity": "black-off-shoulder-gown"
+    },
+    {
+      "finding_id": "seo-7-strong-visibility",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "champagne-bridesmaid-dress",
+      "title": "Strong organic visibility: champagne-bridesmaid-dress",
+      "description": "The page combines stronger relative position with at least median CTR.",
+      "severity": "Medium",
+      "impact_score": 45.0,
+      "priority_score": 48.5,
+      "supporting_metrics": {
+        "avg_position": 3.8,
+        "organic_ctr_pct": 5.0
+      },
+      "evidence": [
+        "source row 9: avg_position=3.8; organic_ctr_pct=5.0"
+      ],
+      "business_interpretation": "The page combines stronger relative position with at least median CTR.",
+      "limitations": [
+        "This is a current relative signal, not evidence of future or historical change."
+      ],
+      "recommended_action": "Document the page's content and internal-linking patterns for controlled reuse.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 45.0,
+        "financial_exposure_or_opportunity": 15.0,
+        "reach_or_visibility": 75.0,
+        "actionability": 55.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "The page combines stronger relative position with at least median CTR.",
+      "entity": "champagne-bridesmaid-dress"
+    },
+    {
+      "finding_id": "seo-9-high-impression-low-ctr",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "long-sleeve-evening-dress",
+      "title": "High-impression, below-peer CTR page: long-sleeve-evening-dress",
+      "description": "The page has at least median impressions but below-median organic CTR.",
+      "severity": "High",
+      "impact_score": 65.0,
+      "priority_score": 64.0,
+      "supporting_metrics": {
+        "impressions_28d": 18100.0,
+        "organic_ctr_pct": 1.0
+      },
+      "evidence": [
+        "source row 11: impressions_28d=18100.0; organic_ctr_pct=1.0; peer_median_ctr=1.75"
+      ],
+      "business_interpretation": "The page has at least median impressions but below-median organic CTR.",
+      "limitations": [
+        "CTR varies with query mix and position; 28-day aggregate data has no history."
+      ],
+      "recommended_action": "Review title, snippet and search-intent alignment while considering average position.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 65.0,
+        "financial_exposure_or_opportunity": 35.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 75.0,
+        "evidence_confidence": 90.0
+      },
+      "detail": "The page has at least median impressions but below-median organic CTR.",
+      "entity": "long-sleeve-evening-dress"
+    },
+    {
+      "finding_id": "seo-9-not-indexed",
+      "category": "problem",
+      "source_dataset": "SEO",
+      "entity_name": "long-sleeve-evening-dress",
+      "title": "Non-indexed page: long-sleeve-evening-dress",
+      "description": "The page is marked as not indexed.",
+      "severity": "High",
+      "impact_score": 70.0,
+      "priority_score": 64.5,
+      "supporting_metrics": {
+        "indexed": false
+      },
+      "evidence": [
+        "source row 11: indexed=False"
+      ],
+      "business_interpretation": "The page is marked as not indexed.",
+      "limitations": [
+        "The dataset does not explain why the page is not indexed."
+      ],
+      "recommended_action": "Inspect indexability, canonicalisation, robots directives and sitemap coverage.",
+      "dataset": "seo",
+      "type": "problem",
+      "priority": "High",
+      "priority_factors": {
+        "potential_business_impact": 70.0,
+        "financial_exposure_or_opportunity": 20.0,
+        "reach_or_visibility": 85.0,
+        "actionability": 85.0,
+        "evidence_confidence": 95.0
+      },
+      "detail": "The page is marked as not indexed.",
+      "entity": "long-sleeve-evening-dress"
+    },
+    {
+      "finding_id": "seo-9-weak-visibility",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "long-sleeve-evening-dress",
+      "title": "Weaker search visibility: long-sleeve-evening-dress",
+      "description": "Average position is in the weaker quartile of supplied pages.",
+      "severity": "Medium",
+      "impact_score": 55.0,
+      "priority_score": 55.25,
+      "supporting_metrics": {
+        "avg_position": 19.3
+      },
+      "evidence": [
+        "source row 11: avg_position=19.3; upper_quartile=15.05"
+      ],
+      "business_interpretation": "Average position is in the weaker quartile of supplied pages.",
+      "limitations": [
+        "Average position is a 28-day aggregate and is not a historical trend."
+      ],
+      "recommended_action": "Review page relevance, internal links and content coverage for the queries represented.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 20.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 65.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Average position is in the weaker quartile of supplied pages.",
+      "entity": "long-sleeve-evening-dress"
+    },
+    {
+      "finding_id": "seo-9-slow-load",
+      "category": "problem",
+      "source_dataset": "SEO",
+      "entity_name": "long-sleeve-evening-dress",
+      "title": "Comparatively slow page load: long-sleeve-evening-dress",
+      "description": "Page load time is in the upper quartile of supplied pages.",
+      "severity": "Medium",
+      "impact_score": 45.0,
+      "priority_score": 48.5,
+      "supporting_metrics": {
+        "page_load_ms": 96.0
+      },
+      "evidence": [
+        "source row 11: page_load_ms=96.0; upper_quartile=83.5"
+      ],
+      "business_interpretation": "Page load time is in the upper quartile of supplied pages.",
+      "limitations": [
+        "No device, geography or lab/field measurement context is supplied."
+      ],
+      "recommended_action": "Profile the page and prioritise the largest measurable loading bottlenecks.",
+      "dataset": "seo",
+      "type": "problem",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 45.0,
+        "financial_exposure_or_opportunity": 15.0,
+        "reach_or_visibility": 65.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Page load time is in the upper quartile of supplied pages.",
+      "entity": "long-sleeve-evening-dress"
+    },
+    {
+      "finding_id": "seo-10-strong-visibility",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "rose-gold-prom-dress",
+      "title": "Strong organic visibility: rose-gold-prom-dress",
+      "description": "The page combines stronger relative position with at least median CTR.",
+      "severity": "Medium",
+      "impact_score": 45.0,
+      "priority_score": 48.5,
+      "supporting_metrics": {
+        "avg_position": 5.6,
+        "organic_ctr_pct": 3.0
+      },
+      "evidence": [
+        "source row 12: avg_position=5.6; organic_ctr_pct=3.0"
+      ],
+      "business_interpretation": "The page combines stronger relative position with at least median CTR.",
+      "limitations": [
+        "This is a current relative signal, not evidence of future or historical change."
+      ],
+      "recommended_action": "Document the page's content and internal-linking patterns for controlled reuse.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 45.0,
+        "financial_exposure_or_opportunity": 15.0,
+        "reach_or_visibility": 75.0,
+        "actionability": 55.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "The page combines stronger relative position with at least median CTR.",
+      "entity": "rose-gold-prom-dress"
+    },
+    {
+      "finding_id": "seo-11-weak-visibility",
+      "category": "opportunity",
+      "source_dataset": "SEO",
+      "entity_name": "ivory-formal-gown",
+      "title": "Weaker search visibility: ivory-formal-gown",
+      "description": "Average position is in the weaker quartile of supplied pages.",
+      "severity": "Medium",
+      "impact_score": 55.0,
+      "priority_score": 55.25,
+      "supporting_metrics": {
+        "avg_position": 22.4
+      },
+      "evidence": [
+        "source row 13: avg_position=22.4; upper_quartile=15.05"
+      ],
+      "business_interpretation": "Average position is in the weaker quartile of supplied pages.",
+      "limitations": [
+        "Average position is a 28-day aggregate and is not a historical trend."
+      ],
+      "recommended_action": "Review page relevance, internal links and content coverage for the queries represented.",
+      "dataset": "seo",
+      "type": "opportunity",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 55.0,
+        "financial_exposure_or_opportunity": 20.0,
+        "reach_or_visibility": 80.0,
+        "actionability": 65.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Average position is in the weaker quartile of supplied pages.",
+      "entity": "ivory-formal-gown"
+    },
+    {
+      "finding_id": "seo-11-slow-load",
+      "category": "problem",
+      "source_dataset": "SEO",
+      "entity_name": "ivory-formal-gown",
+      "title": "Comparatively slow page load: ivory-formal-gown",
+      "description": "Page load time is in the upper quartile of supplied pages.",
+      "severity": "Medium",
+      "impact_score": 45.0,
+      "priority_score": 48.5,
+      "supporting_metrics": {
+        "page_load_ms": 88.0
+      },
+      "evidence": [
+        "source row 13: page_load_ms=88.0; upper_quartile=83.5"
+      ],
+      "business_interpretation": "Page load time is in the upper quartile of supplied pages.",
+      "limitations": [
+        "No device, geography or lab/field measurement context is supplied."
+      ],
+      "recommended_action": "Profile the page and prioritise the largest measurable loading bottlenecks.",
+      "dataset": "seo",
+      "type": "problem",
+      "priority": "Medium",
+      "priority_factors": {
+        "potential_business_impact": 45.0,
+        "financial_exposure_or_opportunity": 15.0,
+        "reach_or_visibility": 65.0,
+        "actionability": 75.0,
+        "evidence_confidence": 85.0
+      },
+      "detail": "Page load time is in the upper quartile of supplied pages.",
+      "entity": "ivory-formal-gown"
+    }
+  ],
+  "action_plan": {
+    "immediate_actions": [
+      {
+        "recommendation_id": "rec-2",
+        "title": "Protect and monitor high-revenue campaigns",
+        "category": "Advertising",
+        "description": "Campaigns such as Google Search - Prom, Google Search - Brand, and Meta - Sale Creative contribute meaningful revenue in the upper quartile of supplied campaigns.",
+        "related_finding_ids": [
+          "ads-0-meaningful-revenue",
+          "ads-4-meaningful-revenue",
+          "ads-9-meaningful-revenue"
+        ],
+        "priority": "High",
+        "evidence": [
+          "source row 2: revenue_usd=3720.0; upper_quartile=3700.0",
+          "source row 6: revenue_usd=5760.0; upper_quartile=3700.0",
+          "source row 11: revenue_usd=3740.0; upper_quartile=3700.0"
+        ],
+        "suggested_action": "Protect the campaigns' measured revenue contribution while checking incrementality and conversion quality.",
+        "expected_business_outcome": "Sustained or improved revenue contribution from key campaigns.",
+        "measurement_method": "Track revenue and conversion quality metrics over time for these campaigns.",
+        "implementation_effort": "Medium",
+        "confidence": "high",
+        "assumptions": [
+          "Revenue contribution is meaningful and incremental.",
+          "Conversion quality is a valid proxy for campaign effectiveness."
+        ],
+        "limitations": [
+          "Incrementality and margin data are unavailable.",
+          "Revenue contribution alone does not guarantee profitability."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "0a5ab9a9e1f9abade4f48eccdcaaf340a1090293fb8574d202ff57d9535fb5e2"
+      },
+      {
+        "recommendation_id": "rec-3",
+        "title": "Leverage high-ROAS campaigns for controlled scaling",
+        "category": "Advertising",
+        "description": "Campaigns like Google Search - Prom, Meta - Retargeting, and Google Search - Brand have ROAS in the upper quartile, indicating strong performance potential.",
+        "related_finding_ids": [
+          "ads-0-high-roas",
+          "ads-2-high-roas",
+          "ads-4-high-roas"
+        ],
+        "priority": "High",
+        "evidence": [
+          "source row 2: roas=6.0; upper_quartile=5.875",
+          "source row 4: roas=8.0; upper_quartile=5.875",
+          "source row 6: roas=24.0; upper_quartile=5.875"
+        ],
+        "suggested_action": "Run a controlled review to determine if learnings can be replicated; avoid automatic budget increases.",
+        "expected_business_outcome": "Potential for scalable revenue growth with maintained efficiency.",
+        "measurement_method": "Conduct controlled experiments and monitor ROAS and revenue impact.",
+        "implementation_effort": "Medium",
+        "confidence": "high",
+        "assumptions": [
+          "High ROAS indicates potential for scalable performance.",
+          "Controlled reviews can identify replicable strategies."
+        ],
+        "limitations": [
+          "High ROAS alone does not establish incremental scalability or causal performance."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "1c19cfd24543ee8291d5f49dbd0140f87e876b2ebc5f9ab8d71d480c0be087c0"
+      },
+      {
+        "recommendation_id": "rec-4",
+        "title": "Improve low conversion rate campaigns through creative and audience testing",
+        "category": "Advertising",
+        "description": "Campaigns such as Google Shopping - Dresses, Meta - Prospecting, Google Performance Max, and Meta - Lookalike have conversion rates below the campaign median.",
+        "related_finding_ids": [
+          "ads-1-low-conversion",
+          "ads-3-low-conversion",
+          "ads-6-low-conversion",
+          "ads-7-low-conversion"
+        ],
+        "priority": "High",
+        "evidence": [
+          "source row 3: conversion_rate_pct=1.25; peer_median=2.0",
+          "source row 5: conversion_rate_pct=1.0; peer_median=2.0",
+          "source row 8: conversion_rate_pct=1.25; peer_median=2.0",
+          "source row 9: conversion_rate_pct=1.4383561643835616; peer_median=2.0"
+        ],
+        "suggested_action": "Compare these campaigns with stronger peers and test the most relevant creative or audience variables.",
+        "expected_business_outcome": "Improved conversion rates leading to better campaign efficiency.",
+        "measurement_method": "Track conversion rates and compare against campaign medians after testing.",
+        "implementation_effort": "Medium",
+        "confidence": "medium",
+        "assumptions": [
+          "Creative and audience variables impact conversion rates.",
+          "Peer median conversion rates are appropriate benchmarks."
+        ],
+        "limitations": [
+          "Relative results are not absolute failures without campaign objectives."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "32ad5c88d24bc6d5524989912257a4ae10dd729659cb5c6f7daf369d8613c64a"
+      },
+      {
+        "recommendation_id": "rec-5",
+        "title": "Enhance CTR for campaigns below peer median",
+        "category": "Advertising",
+        "description": "Several campaigns including Meta - Prospecting, Meta - New Collection, Google Performance Max, Meta - Lookalike, and Meta - Sale Creative have CTR below the campaign median.",
+        "related_finding_ids": [
+          "ads-3-low-ctr",
+          "ads-5-low-ctr",
+          "ads-6-low-ctr",
+          "ads-7-low-ctr",
+          "ads-9-low-ctr"
+        ],
+        "priority": "High",
+        "evidence": [
+          "source row 5: ctr_pct=1.3013698630136987; peer_median=1.510111022997621",
+          "source row 7: ctr_pct=1.443298969072165; peer_median=1.510111022997621",
+          "source row 8: ctr_pct=1.3333333333333335; peer_median=1.510111022997621",
+          "source row 9: ctr_pct=1.3035714285714286; peer_median=1.510111022997621",
+          "source row 11: ctr_pct=1.4049586776859504; peer_median=1.510111022997621"
+        ],
+        "suggested_action": "Compare these campaigns with stronger peers and test the most relevant creative or audience variables to improve CTR.",
+        "expected_business_outcome": "Increased CTR leading to higher engagement and potential conversions.",
+        "measurement_method": "Monitor CTR improvements relative to campaign medians after optimizations.",
+        "implementation_effort": "Medium",
+        "confidence": "medium",
+        "assumptions": [
+          "Creative and audience variables influence CTR.",
+          "Peer median CTR is a relevant benchmark."
+        ],
+        "limitations": [
+          "Relative CTR below median is not an absolute failure without campaign objectives."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "937aa4b388f85856257209cd0354b720da39684bb75a59336483088153880892"
+      },
+      {
+        "recommendation_id": "rec-6",
+        "title": "Review and optimize SEO pages with high impressions but below-peer CTR",
+        "category": "SEO",
+        "description": "Pages such as black-mermaid-prom-dress, blue-cocktail-dress, black-off-shoulder-gown, and long-sleeve-evening-dress have high impressions but organic CTR below the median, indicating potential for improved search snippet effectiveness.",
+        "related_finding_ids": [
+          "seo-0-high-impression-low-ctr",
+          "seo-2-high-impression-low-ctr",
+          "seo-6-high-impression-low-ctr",
+          "seo-9-high-impression-low-ctr"
+        ],
+        "priority": "High",
+        "evidence": [
+          "source row 2: impressions_28d=52000.0; organic_ctr_pct=0.7884615384615384; peer_median_ctr=1.75",
+          "source row 4: impressions_28d=21400.0; organic_ctr_pct=0.5; peer_median_ctr=1.75",
+          "source row 8: impressions_28d=44000.0; organic_ctr_pct=0.7000000000000001; peer_median_ctr=1.75",
+          "source row 11: impressions_28d=18100.0; organic_ctr_pct=1.0; peer_median_ctr=1.75"
+        ],
+        "suggested_action": "Review title, snippet, and search-intent alignment while considering average position to improve CTR.",
+        "expected_business_outcome": "Higher organic CTR leading to increased organic traffic and potential conversions.",
+        "measurement_method": "Track changes in organic CTR and impressions over time for these pages.",
+        "implementation_effort": "Medium",
+        "confidence": "high",
+        "assumptions": [
+          "Improving title and snippet relevance can increase CTR.",
+          "Search-intent alignment affects user click behavior."
+        ],
+        "limitations": [
+          "CTR varies with query mix and position.",
+          "28-day aggregate data has no historical trend."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "bf2eb30b110efa5918a534a7bade29b88ee52a3a878856229eb5181765d46fc0"
+      },
+      {
+        "recommendation_id": "rec-7",
+        "title": "Investigate and resolve non-indexed SEO pages",
+        "category": "SEO",
+        "description": "Pages navy-formal-dress and long-sleeve-evening-dress are marked as not indexed, limiting their visibility in search results.",
+        "related_finding_ids": [
+          "seo-3-not-indexed",
+          "seo-9-not-indexed"
+        ],
+        "priority": "High",
+        "evidence": [
+          "source row 5: indexed=False",
+          "source row 11: indexed=False"
+        ],
+        "suggested_action": "Inspect indexability, canonicalisation, robots directives, and sitemap coverage to resolve indexing issues.",
+        "expected_business_outcome": "Improved search visibility and potential organic traffic growth.",
+        "measurement_method": "Monitor indexing status and organic impressions after remediation.",
+        "implementation_effort": "Medium",
+        "confidence": "high",
+        "assumptions": [
+          "Indexing issues are resolvable through technical SEO fixes.",
+          "Indexed pages will gain organic visibility."
+        ],
+        "limitations": [
+          "Dataset does not explain why pages are not indexed."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "331b7b479b37f96795db5ca426377bfdeae5905bee16a89391f55fbfc8457add"
+      }
+    ],
+    "short_term_optimisation": [
+      {
+        "recommendation_id": "rec-8",
+        "title": "Address comparatively slow page load times on key SEO pages",
+        "category": "SEO",
+        "description": "Pages ivory-formal-gown, blue-cocktail-dress, and long-sleeve-evening-dress have page load times in the upper quartile, potentially impacting user experience and SEO performance.",
+        "related_finding_ids": [
+          "seo-11-slow-load",
+          "seo-2-slow-load",
+          "seo-9-slow-load"
+        ],
+        "priority": "Medium",
+        "evidence": [
+          "source row 13: page_load_ms=88.0; upper_quartile=83.5",
+          "source row 4: page_load_ms=91.0; upper_quartile=83.5",
+          "source row 11: page_load_ms=96.0; upper_quartile=83.5"
+        ],
+        "suggested_action": "Profile the pages and prioritize the largest measurable loading bottlenecks for optimization.",
+        "expected_business_outcome": "Improved page load times leading to better user experience and potential SEO ranking benefits.",
+        "measurement_method": "Measure page load times before and after optimizations using consistent tools.",
+        "implementation_effort": "Medium",
+        "confidence": "medium",
+        "assumptions": [
+          "Reducing page load times improves user experience and SEO.",
+          "Identified pages have measurable bottlenecks."
+        ],
+        "limitations": [
+          "No device, geography, or lab/field measurement context is supplied."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "b3eb9c263364e501d6d84a8b93d118909431d36a885f9ceba70f0288978930a2"
+      },
+      {
+        "recommendation_id": "rec-9",
+        "title": "Document and replicate content and linking patterns from strong SEO performers",
+        "category": "SEO",
+        "description": "Pages such as red-satin-evening-gown, rose-gold-prom-dress, and champagne-bridesmaid-dress show strong organic visibility with good position and CTR.",
+        "related_finding_ids": [
+          "seo-1-strong-visibility",
+          "seo-10-strong-visibility",
+          "seo-7-strong-visibility"
+        ],
+        "priority": "Medium",
+        "evidence": [
+          "source row 3: avg_position=4.3; organic_ctr_pct=3.0",
+          "source row 12: avg_position=5.6; organic_ctr_pct=3.0",
+          "source row 9: avg_position=3.8; organic_ctr_pct=5.0"
+        ],
+        "suggested_action": "Document the pages' content and internal-linking patterns for controlled reuse across other pages.",
+        "expected_business_outcome": "Improved SEO performance on additional pages by applying proven content and linking strategies.",
+        "measurement_method": "Track changes in average position and CTR on pages where patterns are applied.",
+        "implementation_effort": "Low",
+        "confidence": "medium",
+        "assumptions": [
+          "Content and linking patterns contribute to strong SEO performance.",
+          "Patterns can be effectively replicated on other pages."
+        ],
+        "limitations": [
+          "Current relative signals do not guarantee future or historical change."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "e54d40327849708f2253eef0c61ca666ee4fab814a83130a81c916e7aeb987bf"
+      }
+    ],
+    "longer_term_opportunities": [
+      {
+        "recommendation_id": "rec-1",
+        "title": "Review and optimize spend on high-spend campaigns with below-peer ROAS",
+        "category": "Advertising",
+        "description": "Several high-spend campaigns such as Google Performance Max, Meta - Prospecting, and Google Shopping - Dresses have ROAS below the campaign median despite spending at or above the median. This indicates potential inefficiencies in budget allocation.",
+        "related_finding_ids": [
+          "ads-6-high-spend",
+          "ads-3-high-spend",
+          "ads-1-high-spend",
+          "ads-6-low-roas",
+          "ads-3-low-roas",
+          "ads-1-low-roas",
+          "ads-7-low-roas"
+        ],
+        "priority": "Critical",
+        "evidence": [
+          "source row 8: spend_usd=1120.0; roas=3.25; peer_median_roas=4.476027397260274",
+          "source row 5: spend_usd=950.0; roas=2.2; peer_median_roas=4.476027397260274",
+          "source row 3: spend_usd=880.0; roas=3.25; peer_median_roas=4.476027397260274",
+          "source row 9: roas=3.452054794520548; peer_median_roas=4.476027397260274"
+        ],
+        "suggested_action": "Review spend allocation alongside conversions, revenue, and ROAS. Investigate creative, audience, placement, and landing-page efficiency before making budget changes.",
+        "expected_business_outcome": "Improved return on ad spend and more efficient budget utilization.",
+        "measurement_method": "Monitor ROAS and conversion rates post-optimization and compare against campaign medians.",
+        "implementation_effort": "High",
+        "confidence": "high",
+        "assumptions": [
+          "Campaign median ROAS is a relevant benchmark.",
+          "Improving creative, audience, placement, or landing-page efficiency can increase ROAS."
+        ],
+        "limitations": [
+          "A lower relative ROAS is not proof of unprofitability without business margin targets.",
+          "No budget target is available for spend comparison."
+        ],
+        "review_status": "pending_review",
+        "reviewer_note": "",
+        "review_fingerprint": "0165723897aedc87ef78165644311c0aa774788a12f603feaa8fce1417231a95"
+      }
+    ],
+    "ordering_reason": "Higher priority and lower stated implementation effort are ordered first; no deadlines are inferred."
+  },
+  "executive_summary": {
+    "headline": "37 current performance findings identified across advertising and SEO.",
+    "advertising": {
+      "spend_usd": 6680.0,
+      "clicks": 14180.0,
+      "purchases": 286.0,
+      "revenue_usd": 32230.0,
+      "impressions": 872000.0,
+      "reach": 43600.0,
+      "ctr_pct": 1.6261,
+      "cpc_usd": 0.4711,
+      "cpa_usd": 23.3566,
+      "roas": 4.8249,
+      "conversion_rate_pct": 2.0169,
+      "cpm_usd": 7.6606,
+      "frequency": 20.0
+    },
+    "seo": {
+      "total_impressions_28d": 254900,
+      "total_clicks_28d": 4605,
+      "organic_ctr_pct": 1.8066,
+      "average_search_position": 11.2083,
+      "indexed_page_percentage": 83.3333,
+      "non_indexed_page_count": 2,
+      "average_page_load_ms": 68.0833
+    },
+    "data_quality": {
+      "ads": {
+        "dataset": "ads",
+        "row_count": 10,
+        "column_count": 9,
+        "missing_values": {
+          "campaign": 0,
+          "platform": 0,
+          "campaign_type": 0,
+          "spend_usd": 0,
+          "clicks": 0,
+          "purchases": 0,
+          "revenue_usd": 0,
+          "impressions": 0,
+          "reach": 0
+        },
+        "duplicate_rows": 0,
+        "issues": [],
+        "critical_error_count": 0,
+        "warning_count": 0,
+        "noteworthy_count": 0
+      },
+      "seo": {
+        "dataset": "seo",
+        "row_count": 12,
+        "column_count": 10,
+        "missing_values": {
+          "product_id": 0,
+          "product_name": 0,
+          "category": 0,
+          "url_slug": 0,
+          "description": 2,
+          "impressions_28d": 0,
+          "clicks_28d": 0,
+          "avg_position": 0,
+          "indexed": 0,
+          "page_load_ms": 0
+        },
+        "duplicate_rows": 0,
+        "issues": [
+          {
+            "severity": "warning",
+            "code": "missing_value",
+            "message": "2 missing value(s)",
+            "column": "description",
+            "count": 2
+          }
+        ],
+        "critical_error_count": 0,
+        "warning_count": 2,
+        "noteworthy_count": 0
+      }
+    },
+    "highest_priority_findings": [
+      {
+        "finding_id": "ads-6-high-spend",
+        "category": "problem",
+        "source_dataset": "Advertising",
+        "entity_name": "Google Performance Max",
+        "title": "High-spend campaign: Google Performance Max",
+        "description": "Spend is in the upper quartile of the supplied campaigns.",
+        "severity": "Critical",
+        "impact_score": 75.0,
+        "priority_score": 80.25,
+        "supporting_metrics": {
+          "spend_usd": 1120.0
+        },
+        "evidence": [
+          "source row 8: spend_usd=1120.0"
+        ],
+        "business_interpretation": "Spend is in the upper quartile of the supplied campaigns.",
+        "limitations": [
+          "Relative to this dataset only; no budget target is available."
+        ],
+        "recommended_action": "Review spend allocation alongside conversions, revenue and ROAS.",
+        "dataset": "advertising",
+        "type": "problem",
+        "priority": "Critical",
+        "priority_factors": {
+          "potential_business_impact": 75.0,
+          "financial_exposure_or_opportunity": 100.0,
+          "reach_or_visibility": 60.0,
+          "actionability": 75.0,
+          "evidence_confidence": 95.0
+        },
+        "detail": "Spend is in the upper quartile of the supplied campaigns.",
+        "entity": "Google Performance Max"
+      },
+      {
+        "finding_id": "ads-3-high-spend",
+        "category": "problem",
+        "source_dataset": "Advertising",
+        "entity_name": "Meta - Prospecting",
+        "title": "High-spend campaign: Meta - Prospecting",
+        "description": "Spend is in the upper quartile of the supplied campaigns.",
+        "severity": "High",
+        "impact_score": 75.0,
+        "priority_score": 77.75,
+        "supporting_metrics": {
+          "spend_usd": 950.0
+        },
+        "evidence": [
+          "source row 5: spend_usd=950.0"
+        ],
+        "business_interpretation": "Spend is in the upper quartile of the supplied campaigns.",
+        "limitations": [
+          "Relative to this dataset only; no budget target is available."
+        ],
+        "recommended_action": "Review spend allocation alongside conversions, revenue and ROAS.",
+        "dataset": "advertising",
+        "type": "problem",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 75.0,
+          "financial_exposure_or_opportunity": 90.0,
+          "reach_or_visibility": 60.0,
+          "actionability": 75.0,
+          "evidence_confidence": 95.0
+        },
+        "detail": "Spend is in the upper quartile of the supplied campaigns.",
+        "entity": "Meta - Prospecting"
+      },
+      {
+        "finding_id": "ads-1-high-spend",
+        "category": "problem",
+        "source_dataset": "Advertising",
+        "entity_name": "Google Shopping - Dresses",
+        "title": "High-spend campaign: Google Shopping - Dresses",
+        "description": "Spend is in the upper quartile of the supplied campaigns.",
+        "severity": "High",
+        "impact_score": 75.0,
+        "priority_score": 75.25,
+        "supporting_metrics": {
+          "spend_usd": 880.0
+        },
+        "evidence": [
+          "source row 3: spend_usd=880.0"
+        ],
+        "business_interpretation": "Spend is in the upper quartile of the supplied campaigns.",
+        "limitations": [
+          "Relative to this dataset only; no budget target is available."
+        ],
+        "recommended_action": "Review spend allocation alongside conversions, revenue and ROAS.",
+        "dataset": "advertising",
+        "type": "problem",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 75.0,
+          "financial_exposure_or_opportunity": 80.0,
+          "reach_or_visibility": 60.0,
+          "actionability": 75.0,
+          "evidence_confidence": 95.0
+        },
+        "detail": "Spend is in the upper quartile of the supplied campaigns.",
+        "entity": "Google Shopping - Dresses"
+      },
+      {
+        "finding_id": "ads-1-low-roas",
+        "category": "problem",
+        "source_dataset": "Advertising",
+        "entity_name": "Google Shopping - Dresses",
+        "title": "Below-peer ROAS: Google Shopping - Dresses",
+        "description": "ROAS is below the campaign median while spend is at or above the median.",
+        "severity": "High",
+        "impact_score": 75.0,
+        "priority_score": 70.75,
+        "supporting_metrics": {
+          "roas": 3.25,
+          "spend_usd": 880.0
+        },
+        "evidence": [
+          "source row 3: roas=3.25; peer_median_roas=4.476027397260274"
+        ],
+        "business_interpretation": "ROAS is below the campaign median while spend is at or above the median.",
+        "limitations": [
+          "A lower relative ROAS is not proof of unprofitability without business margin targets."
+        ],
+        "recommended_action": "Investigate creative, audience, placement and landing-page efficiency before changing budget.",
+        "dataset": "advertising",
+        "type": "problem",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 75.0,
+          "financial_exposure_or_opportunity": 70.0,
+          "reach_or_visibility": 55.0,
+          "actionability": 70.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "ROAS is below the campaign median while spend is at or above the median.",
+        "entity": "Google Shopping - Dresses"
+      },
+      {
+        "finding_id": "ads-3-low-roas",
+        "category": "problem",
+        "source_dataset": "Advertising",
+        "entity_name": "Meta - Prospecting",
+        "title": "Below-peer ROAS: Meta - Prospecting",
+        "description": "ROAS is below the campaign median while spend is at or above the median.",
+        "severity": "High",
+        "impact_score": 75.0,
+        "priority_score": 70.75,
+        "supporting_metrics": {
+          "roas": 2.2,
+          "spend_usd": 950.0
+        },
+        "evidence": [
+          "source row 5: roas=2.2; peer_median_roas=4.476027397260274"
+        ],
+        "business_interpretation": "ROAS is below the campaign median while spend is at or above the median.",
+        "limitations": [
+          "A lower relative ROAS is not proof of unprofitability without business margin targets."
+        ],
+        "recommended_action": "Investigate creative, audience, placement and landing-page efficiency before changing budget.",
+        "dataset": "advertising",
+        "type": "problem",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 75.0,
+          "financial_exposure_or_opportunity": 70.0,
+          "reach_or_visibility": 55.0,
+          "actionability": 70.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "ROAS is below the campaign median while spend is at or above the median.",
+        "entity": "Meta - Prospecting"
+      }
+    ],
+    "highest_value_opportunities": [
+      {
+        "finding_id": "ads-0-meaningful-revenue",
+        "category": "opportunity",
+        "source_dataset": "Advertising",
+        "entity_name": "Google Search - Prom",
+        "title": "Meaningful revenue contribution: Google Search - Prom",
+        "description": "Revenue is in the upper quartile of supplied campaigns.",
+        "severity": "High",
+        "impact_score": 65.0,
+        "priority_score": 67.5,
+        "supporting_metrics": {
+          "revenue_usd": 3720.0,
+          "purchases": 31.0
+        },
+        "evidence": [
+          "source row 2: revenue_usd=3720.0; upper_quartile=3700.0"
+        ],
+        "business_interpretation": "Revenue is in the upper quartile of supplied campaigns.",
+        "limitations": [
+          "Revenue contribution is observed; incrementality and margin are unavailable."
+        ],
+        "recommended_action": "Protect the campaign's measured revenue contribution while checking incrementality and conversion quality.",
+        "dataset": "advertising",
+        "type": "opportunity",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 65.0,
+          "financial_exposure_or_opportunity": 75.0,
+          "reach_or_visibility": 55.0,
+          "actionability": 60.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "Revenue is in the upper quartile of supplied campaigns.",
+        "entity": "Google Search - Prom"
+      },
+      {
+        "finding_id": "ads-4-meaningful-revenue",
+        "category": "opportunity",
+        "source_dataset": "Advertising",
+        "entity_name": "Google Search - Brand",
+        "title": "Meaningful revenue contribution: Google Search - Brand",
+        "description": "Revenue is in the upper quartile of supplied campaigns.",
+        "severity": "High",
+        "impact_score": 65.0,
+        "priority_score": 67.5,
+        "supporting_metrics": {
+          "revenue_usd": 5760.0,
+          "purchases": 48.0
+        },
+        "evidence": [
+          "source row 6: revenue_usd=5760.0; upper_quartile=3700.0"
+        ],
+        "business_interpretation": "Revenue is in the upper quartile of supplied campaigns.",
+        "limitations": [
+          "Revenue contribution is observed; incrementality and margin are unavailable."
+        ],
+        "recommended_action": "Protect the campaign's measured revenue contribution while checking incrementality and conversion quality.",
+        "dataset": "advertising",
+        "type": "opportunity",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 65.0,
+          "financial_exposure_or_opportunity": 75.0,
+          "reach_or_visibility": 55.0,
+          "actionability": 60.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "Revenue is in the upper quartile of supplied campaigns.",
+        "entity": "Google Search - Brand"
+      },
+      {
+        "finding_id": "ads-9-meaningful-revenue",
+        "category": "opportunity",
+        "source_dataset": "Advertising",
+        "entity_name": "Meta - Sale Creative",
+        "title": "Meaningful revenue contribution: Meta - Sale Creative",
+        "description": "Revenue is in the upper quartile of supplied campaigns.",
+        "severity": "High",
+        "impact_score": 65.0,
+        "priority_score": 67.5,
+        "supporting_metrics": {
+          "revenue_usd": 3740.0,
+          "purchases": 34.0
+        },
+        "evidence": [
+          "source row 11: revenue_usd=3740.0; upper_quartile=3700.0"
+        ],
+        "business_interpretation": "Revenue is in the upper quartile of supplied campaigns.",
+        "limitations": [
+          "Revenue contribution is observed; incrementality and margin are unavailable."
+        ],
+        "recommended_action": "Protect the campaign's measured revenue contribution while checking incrementality and conversion quality.",
+        "dataset": "advertising",
+        "type": "opportunity",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 65.0,
+          "financial_exposure_or_opportunity": 75.0,
+          "reach_or_visibility": 55.0,
+          "actionability": 60.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "Revenue is in the upper quartile of supplied campaigns.",
+        "entity": "Meta - Sale Creative"
+      },
+      {
+        "finding_id": "ads-0-high-roas",
+        "category": "opportunity",
+        "source_dataset": "Advertising",
+        "entity_name": "Google Search - Prom",
+        "title": "High-ROAS opportunity: Google Search - Prom",
+        "description": "ROAS is in the upper quartile of the supplied campaigns.",
+        "severity": "High",
+        "impact_score": 65.0,
+        "priority_score": 64.75,
+        "supporting_metrics": {
+          "roas": 6.0,
+          "spend_usd": 620.0
+        },
+        "evidence": [
+          "source row 2: roas=6.0; upper_quartile=5.875"
+        ],
+        "business_interpretation": "ROAS is in the upper quartile of the supplied campaigns.",
+        "limitations": [
+          "High ROAS alone does not establish incremental scalability or causal performance."
+        ],
+        "recommended_action": "Run a controlled review of whether learnings can be replicated; do not automatically increase budget.",
+        "dataset": "advertising",
+        "type": "opportunity",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 65.0,
+          "financial_exposure_or_opportunity": 70.0,
+          "reach_or_visibility": 45.0,
+          "actionability": 65.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "ROAS is in the upper quartile of the supplied campaigns.",
+        "entity": "Google Search - Prom"
+      },
+      {
+        "finding_id": "ads-2-high-roas",
+        "category": "opportunity",
+        "source_dataset": "Advertising",
+        "entity_name": "Meta - Retargeting",
+        "title": "High-ROAS opportunity: Meta - Retargeting",
+        "description": "ROAS is in the upper quartile of the supplied campaigns.",
+        "severity": "High",
+        "impact_score": 65.0,
+        "priority_score": 64.75,
+        "supporting_metrics": {
+          "roas": 8.0,
+          "spend_usd": 410.0
+        },
+        "evidence": [
+          "source row 4: roas=8.0; upper_quartile=5.875"
+        ],
+        "business_interpretation": "ROAS is in the upper quartile of the supplied campaigns.",
+        "limitations": [
+          "High ROAS alone does not establish incremental scalability or causal performance."
+        ],
+        "recommended_action": "Run a controlled review of whether learnings can be replicated; do not automatically increase budget.",
+        "dataset": "advertising",
+        "type": "opportunity",
+        "priority": "High",
+        "priority_factors": {
+          "potential_business_impact": 65.0,
+          "financial_exposure_or_opportunity": 70.0,
+          "reach_or_visibility": 45.0,
+          "actionability": 65.0,
+          "evidence_confidence": 90.0
+        },
+        "detail": "ROAS is in the upper quartile of the supplied campaigns.",
+        "entity": "Meta - Retargeting"
+      }
+    ],
+    "priority_score_explanation": "Priority is a reproducible weighted score: impact 35%, financial exposure/opportunity 25%, reach/visibility 20%, actionability 10%, evidence confidence 10%; missing factors are excluded and remaining weights renormalised."
+  }
+}
