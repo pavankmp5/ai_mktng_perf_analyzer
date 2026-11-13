@@ -108,3 +108,10 @@ python -m marketing_analyzer.cli --ads path\ads_data.csv --seo path\seo_data.csv
 
 GitHub Actions CI is configured in `.github/workflows/ci.yml` for Python 3.14. It installs the editable project with development dependencies, compiles source and tests, and runs pytest without making external LLM calls.
 
+## Project demonstration
+
+Watch the Loom walkthrough (audio, webcam, architecture overview, report walkthrough, and live dynamic CSV update):
+
+[AI Marketing Performance Analyser – Loom Demonstration](https://www.loom.com/share/26e6110337584dd5aad24f8fb904b1a3)
+
+The demonstration shows the deterministic analysis pipeline, priority scoring, OpenRouter recommendation integration, Pydantic validation, JSON/HTML reporting, and SHA-256 input change detection.
