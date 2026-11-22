@@ -1,0 +1,40 @@
+# Loom Recording – Terminal Commands
+
+## A. Run the baseline analysis
+
+```powershell
+python -m marketing_analyzer.cli --ads .\data\ads_data.csv --seo .\demo_data\seo_data.csv --reports-dir .\demo_reports --no-recommendations
+```
+
+## B. Check baseline findings
+
+```powershell
+python -c "import json; p=json.load(open(r'.\demo_reports\marketing_report.json',encoding='utf-8')); print('Baseline findings:',len(p['insights'])); print('P-101 finding:',[x for x in p['insights'] if x['finding_id']=='seo-0-weak-visibility'])"
+```
+
+Expected: 37 findings and no P-101 weak-visibility finding.
+
+## C. After changing P-101 avg_position from 11.8 to 25, rerun analysis
+
+```powershell
+python -m marketing_analyzer.cli --ads .\data\ads_data.csv --seo .\demo_data\seo_data.csv --reports-dir .\demo_reports --no-recommendations
+```
+
+## D. Verify the updated finding and change detection
+
+```powershell
+python -c "import json; p=json.load(open(r'.\demo_reports\marketing_report.json',encoding='utf-8')); print('Updated findings:',len(p['insights'])); print('P-101 visibility finding:',[x for x in p['insights'] if x['finding_id']=='seo-0-weak-visibility']); print('Change detection:',p['change_detection'])"
+```
+
+Expected:
+- P-101 weak-visibility finding is present.
+- Its average position is 25.
+- SEO changed = True.
+- Ads changed = False.
+- Any changed = True.
+
+## E. Show the main report's recommendation summary
+
+```powershell
+python -c "import json; p=json.load(open(r'.\reports\marketing_report.json',encoding='utf-8')); print('Deterministic insights:',len(p['insights'])); print('Recommendations:',len(p['recommendations'])); print('Review statuses:',{s:sum(1 for r in p['recommendations'] if r.get('review_status')==s) for s in set(r.get('review_status') for r in p['recommendations'])})"
+```
